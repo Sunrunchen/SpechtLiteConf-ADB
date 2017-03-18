@@ -1,20 +1,17 @@
-# Generate config file for [SpechtLite](https://github.com/zhuhaow/SpechtLite)
+# 配置模板 for [SpechtLite](https://github.com/zhuhaow/SpechtLite)
 
-## List Explaination
+## 配置文件说明
+- **Conf.yaml**: SpechtLite 主要代理配置文件
 
-- **gfwlist**: proxy list gnerate from [gfwlist](https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt)
+- **Proxylist**: 强制代理列表
 
-- **whitelist**: white list generate from [dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
+- **rejectlist**: 部分来自 [BurpSuite](https://raw.githubusercontent.com/BurpSuite/CloudGate-RuleList/master/Rule/REJECT)，部分来自abclite的surge文件，全年去国内优酷、乐视、腾讯等视频广告。
 
-- **rejectlist**: reject list from [BurpSuite](https://raw.githubusercontent.com/BurpSuite/CloudGate-RuleList/master/Rule/REJECT)
+- **proxyiprange**: 加入 telegram and Amazon EC2 IPs
 
-- **proxyiprange**: Add telegram and Amazon EC2 IPs
-
-##How to use
-> 1. Go to `conf` and configure your own adapter in `gfwlist.yaml` or `whitelist.yaml`. If you don't need to generate new config file, just jump to step 4
-> 2. `pip3 install -r requirement.txt`
-> 3. `python3 spechtlite_conf.py`
-> 4. copy or link files which in `conf` to `~/SpechtLiteConf`
+##使用方法
+> 1. 配置 Conf.yaml 代理信息
+> 2. 复制文件到 `~/SpechtLiteConf`
 
 ##MIT License (MIT)
 
