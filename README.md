@@ -1,6 +1,6 @@
 ## 说明
 本模板 fork 自[geekpi/SpechtLiteConf](https://github.com/geekpi/SpechtLiteConf)
-本人不是程序员，如有违反某些规定，请告知。
+- 本人不是程序员，如有违反某些规定，请告知。
 # 配置模板 for [SpechtLite](https://github.com/zhuhaow/SpechtLite)
 
 ## 配置文件说明
@@ -12,7 +12,7 @@
 
 - **proxyiprange**: 加入 telegram and Amazon EC2 IPs
 
-##使用方法
+## 使用方法
 > 1. 配置 Conf.yaml 代理信息
 > 2. 复制文件到 `~/SpechtLiteConf`
 
