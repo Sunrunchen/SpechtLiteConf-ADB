@@ -6,7 +6,7 @@
 ## 配置文件说明
 - **Conf.yaml**: SpechtLite 主要代理配置文件
 
-- **Proxylist**: 强制代理列表，可以把自己想要强制代理的域名加入进去，如：baidu\.com
+- **Proxylist**: 强制代理列表，可以把自己想要强制代理的域名加入进去，如：<code>baidu\.com</code>
 - **directlist**: 直连列表，来自[china_ip_list](https://github.com/17mon/china_ip_list)
 - **rejectlist**: 部分来自 [BurpSuite](https://raw.githubusercontent.com/BurpSuite/CloudGate-RuleList/master/Rule/REJECT)，部分来自abclite的surge文件，全面去国内优酷、乐视、腾讯等视频广告。
 
