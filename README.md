@@ -10,7 +10,8 @@
 ```
 baidu\.com
 ```
-- **directiprange**: 直连列表，来自[china_ip_list](https://github.com/17mon/china_ip_list)
+- **directiprange**: 直连列表，来自 [china_ip_list](https://github.com/17mon/china_ip_list)
+- **directlist**: 直连域名列表，来自 [dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list)
 - **rejectlist**: 部分来自 [BurpSuite](https://raw.githubusercontent.com/BurpSuite/CloudGate-RuleList/master/Rule/REJECT)，部分来自abclite的surge文件，全面去国内优酷、乐视、腾讯等视频广告。
 
 - **proxyiprange**: 加入 telegram and Amazon EC2 IPs
