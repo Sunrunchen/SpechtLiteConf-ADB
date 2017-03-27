@@ -22,7 +22,8 @@ baidu\.com
 
 ## 具体图文教程
 > 1. [微信链接](http://mp.weixin.qq.com/s/nIIZ7KprczpcBUUSsWDh2Q)
-##MIT License (MIT)
+
+## MIT License (MIT)
 
 The MIT License (MIT)
 
