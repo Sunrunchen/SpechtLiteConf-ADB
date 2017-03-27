@@ -12,7 +12,7 @@ baidu\.com
 ```
 - **directiprange**: 直连列表，来自 [china_ip_list](https://github.com/17mon/china_ip_list)
 
-- **rejectlist**: 部分来自 [BurpSuite](https://raw.githubusercontent.com/BurpSuite/CloudGate-RuleList/master/Rule/REJECT)，部分来自abclite的surge文件，全面去国内优酷、乐视、腾讯等视频广告。已知问题：腾讯 NBA 视频全挂，所以看腾讯 NBA 时请停用代理，目前正在排查中...
+- **rejectlist**: 部分来自 [BurpSuite](https://raw.githubusercontent.com/BurpSuite/CloudGate-RuleList/master/Rule/REJECT)，部分来自 abclite 的 Surge 文件，全面去 YouTube、优酷、乐视、腾讯等视频广告。已知问题：腾讯 NBA 视频全挂，所以看腾讯 NBA 时请停用代理，目前正在排查中...
 - **proxyiprange**: 加入 telegram and Amazon EC2 IPs
 
 ## 使用方法
