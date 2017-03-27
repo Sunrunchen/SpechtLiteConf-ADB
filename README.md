@@ -20,6 +20,8 @@ baidu\.com
 > 1. 配置 Conf.yaml 代理信息
 > 2. 复制文件到 `~/SpechtLiteConf`
 
+## 具体图文教程
+> 1. [微信链接](http://mp.weixin.qq.com/s/nIIZ7KprczpcBUUSsWDh2Q)
 ##MIT License (MIT)
 
 The MIT License (MIT)
