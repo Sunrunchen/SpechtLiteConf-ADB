@@ -1,3 +1,4 @@
+你可以直接在[这里下载](https://github.com/Sunrunchen/SpechtLiteConf-ADB/archive/v0.1.zip)。
 ## 说明
 本模板 fork 自[S7venYoung/SpechtLiteConf-ADB](https://github.com/S7venYoung/SpechtLiteConf-ADB)，在他的配置文件基础上增加了一份负载均衡的配置文件。
 - 本人不是程序员，如有违反某些规定，请告知。
