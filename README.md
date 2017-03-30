@@ -1,4 +1,3 @@
-你可以直接在[这里下载](https://github.com/Sunrunchen/SpechtLiteConf-ADB/archive/v0.1.zip)。
 ## 说明
 本模板 fork 自[S7venYoung/SpechtLiteConf-ADB](https://github.com/S7venYoung/SpechtLiteConf-ADB)，在他的配置文件基础上增加了一份负载均衡的配置文件。
 - 本人不是程序员，如有违反某些规定，请告知。
@@ -21,10 +20,10 @@ baidu\.com
 
 ## 注意：
 
-已知问题包括可能会出现部分网站打开缓慢的，可以修改 speed 这个配置的 delay 参数。
+包中包含两份 yaml 文件，一份为单线路代理文件，load-balance.yaml 为负载均衡文件。
 
 ## 使用方法
-> 1. 配置 Conf.yaml 代理信息
+> 1. 配置 load-balance.yaml 代理信息；
 > 2. 复制文件到 `~/SpechtLiteConf`
 
 ## 具体图文教程
