@@ -1,3 +1,5 @@
+[![GitHub release](https://img.shields.io/badge/release-v0.2-blue.svg)](https://github.com/Sunrunchen/SpechtLiteConf-ADB/releases)
+
 ## 说明
 本模板 fork 自[S7venYoung/SpechtLiteConf-ADB](https://github.com/S7venYoung/SpechtLiteConf-ADB)，在他的配置文件基础上增加了一份负载均衡的配置文件。
 - 本人不是程序员，如有违反某些规定，请告知。
