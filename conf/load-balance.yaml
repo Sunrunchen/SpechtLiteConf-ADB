@@ -1,11 +1,12 @@
-# This is the local http proxy server port.
-# Note there is another SOCKS5 proxy server starts at port+1 automatically.
+# 注释：
+# 本配置文件采用多条线路，按照连接速度选择最快连接。
+# 对于特殊地区（如日本）可以单独配置线路，只需要修改代理国家的 IP 即可。
 port: 9090
 # Adapter is the remote proxy server you want to connect to
 adapter:
      # id is used to distinguish adapter when defining rules.
      # There is a 'direct' adapter that connect directly to target host without proxy.
-     # Currently support: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
+     # 支持的代理加密: AES-128-CFB, AES-192-CFB, AES-256-CFB, chacha20, salsa20, rc4-md5
      # Shadowsocks encryption methods are not fully tested, please report if there is anything not working.
   - id: adapter1
      # adapter1 为日本的线路
@@ -15,12 +16,14 @@ adapter:
     method: AES-256-CFB
     password: 你的 ss 密码
   - id: adapter2
+     # 备选线路 1
     type: ss
     host: 你的 ss 地址
     port: 你的 ss 端口
     method: AES-256-CFB
     password: 你的 ss 密码
   - id: adapter3
+     # 备选线路 2
     type: ss
     host: 你的 ss 地址
     port: 你的 ss 端口
@@ -34,6 +37,7 @@ adapter:
     method: AES-128-CFB
     password: 你的 ss 密码
   - id: adapter5
+     # 特殊地区线路
     type: ss
     host: 你的 ss 地址
     port: 你的 ss 端口
@@ -42,27 +46,31 @@ adapter:
   # Speed adapter automatically connects to all specified adapters (with given delay) 
   # and uses the fastest one that becomes ready.
   - id: proxy
+     # 所有线路的负载均衡
     type: SPEED
     adapters:
-      - id: adapter3
+      - id: adapter1
         delay: 0
       - id: adapter2
         delay: 0
-      - id: adapter5
+      - id: adapter3
         delay: 0
       - id: adapter4
         delay: 300
+      - id: adapter5
+        delay: 0
     # 因为 apater4 为国内中转线路，从节省流量的角度考虑给予 300 delay
   - id: speed
     type: SPEED
     adapters:
       - id: adapter4
         delay: 50
+         # 根据自身的网络情况设置，数字越小则代理消耗流量越多
       - id: direct
         delay: 0
-  # Disconnect after given delay without connecting to remote.
+  # speed 为国内中转的线路
   - id: reject
-    type: reject
+    type: reject 
     # It's very important to set a delay since some apps may try to reconnect repeatedly.
     delay: 400
 # Here defines how things should work.
@@ -107,12 +115,17 @@ rule:
     match: true
     adapter: speed
   - type: country
-  # When the location is in Japan, use JP proxy.
+  # 日本地区特别代理
     country: JP
     match: true
     adapter: adapter1
   - type: country
-  # When the location is unknown. Usually this means this is resolved an Intranet IP.
+  # 特别地区线路
+    country: 想要代理地区的地区代码
+    match: true
+    adapter: adapter5
+  - type: country
+  # 内网 IP 直连
     country: --
     match: true
     adapter: direct
@@ -121,4 +134,4 @@ rule:
     adapter: proxy
   - type: all
   # Match all other requests.
-    adapter: speed
+    adapter: proxy
